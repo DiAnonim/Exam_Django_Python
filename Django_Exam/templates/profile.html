@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load customtags %}
+
+
+{% block title %}<title>Profile</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header">Your Profile</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="profile zilla-slab-light-italic" style="min-height: 450px;">
+    <h2>Username: <span>{{user.username}}</span></h2>
+    <h2>First Name: <span>{{user.first_name | isHaveValue}}</span></h2>
+    <h2>Last Name: <span>{{user.last_name | isHaveValue}}</span></h2>
+    <h2>Email: <span>{{user.email | isHaveValue}}</span></h2>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button  class="logout zilla-slab-light-italic" style="font-size: 22px; " type="submit"> Logout</button>
+    </form>
+</div>
+{% endblock %}

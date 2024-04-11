@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}<title>Sign Up</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header" >Sign Up</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class='card' style="min-height: 570px;">
+    <form class="aHover" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p style="margin-top: 10px;" >Already have an account? <a style="text-shadow: 0 0 10px rgb(0, 0, 0);" href="{% url 'login' %}">Login</a></p>
+        <input style="margin-top: 10px; color: rgb(0, 0, 96)" class="btnCreateStyle" type="submit" value="Sign Up">
+        <a style="text-shadow: 0 0 10px rgb(0, 0, 0); margin-left: 20px;" href="{% url 'home' %}">Cancel</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}<title>No Access</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header">ДОСТУП ЗАПРЕЩЕН! Пожалуйста зарегистрируйтесь</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="min-height: 570px; text-align: center">
+    <p style="color: rgb(196, 222, 245);">
+        Пожалуйста подождите, идёт перенаправление на страницу регистрации...</p>
+        </div>
+    <script>
+        setTimeoutSignUp();
+    </script>
+{% endblock %}

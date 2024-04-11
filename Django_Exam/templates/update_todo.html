@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block title %}<title>Create Todo</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header">Create Todo</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card zilla-slab-light-italic" style="min-height: 450px;">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btnCreateStyle zilla-slab-light-italic" style="margin-top: 10px; margin-left: 60px;" type="submit" value="Update">
+    </form>
+</div>
+{% endblock %}

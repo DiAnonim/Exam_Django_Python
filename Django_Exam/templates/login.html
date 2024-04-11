@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Login</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header">Login</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card" style="min-height: 450px;">
+    <form class="aHover" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p style="margin-top: 10px; margin-left: 37px;">Not registered? <a style="text-shadow: 0 0 10px rgb(0, 0, 0);"
+                href="{% url 'signup' %}">Sign Up</a></p>
+        <input style="margin-top: 10px; color: rgb(0, 0, 0); margin-left: 40px;" class="btnCreateStyle" type="submit"
+            value="Login">
+    </form>
+</div>
+{% endblock %}
+

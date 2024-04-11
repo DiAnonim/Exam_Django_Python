@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Home</title>{% endblock %}
+{% block header %}
+<h1 class="base-header">Home</h1>
+{% if request.user.is_authenticated %}
+<h2 class="base-header">Welcome, {{request.user.username}}</h2>
+{% else %}
+<h2 class="base-header">Welcome, guest</h2>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="zilla-slab-light-italic" style="color: rgb(196, 222, 245);">
+
+    {% if request.user.is_authenticated %}
+    <section class="tools ">
+        <div class="aHover">
+            <a href="{% url 'create_todo' %}"><img alt="">Create Todo</a>
+        </div>
+    </section>
+    {% endif %}
+
+    <h2 class="base-header">Todo List</h2>
+    <section class="todo-list">
+        {% for todo in todos %}
+        <div class="todo-home">
+            <h3 class="aHover"><a href=" {% url 'todo_detail' todo.id %} ">{{todo.title}}</a></h3>
+            <p>Status: {{todo.get_status_display}}</p>
+            <p>Created: {{todo.created}}</p>
+            <p>Priority: {{todo.get_important_display}}</p>
+            <p>Perform: {{todo.perform}}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="pagination">
+        <div class="aHover pagination" >
+            {% if page_obj.has_previous %}
+            <a class="prev" href="?page={{ page_obj.previous_page_number }}">&lt;&lt;</a>
+            {% endif %}
+            Page <span class="current">{{ page_obj.number }}</span> of <span class="allPages">{{ page_obj.paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">&gt;&gt;</a>
+            {% endif %}
+        </div>
+    </section>
+</div>
+{% endblock %}

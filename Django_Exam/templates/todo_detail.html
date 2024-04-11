@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block title %}<title>Detail Todo</title>{% endblock %}
+{% block header %}
+<div class="copyright">
+    <h1 class="base-header">Detail Todo</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="profile aHover zilla-slab-light-italic" style=" min-height: 450px;">
+
+    <div class="tools" style="width: 370px;">
+        <a href="{% url 'home' %}">Back</a>
+        <a href="{% url 'todo_update' todo.id %}">Update</a>
+        <a href="{% url 'todo_delete' todo.id %}">Delete</a>
+    </div>
+
+    <br><img style="width: 300px; border-radius: 10px;" src="{{todo.image.url}}" alt="">
+    <h2>Title: <span>{{todo.title}}</span></h2>
+    <h2>Status: <span>{{todo.get_status_display}}</span></h2>
+    <h2>Priority: <span>{{todo.get_important_display}}</span></h2>
+    <h2>Description: <span>{{todo.text}}</span></h2>
+    <h2>Created: <span>{{todo.created}}</span></h2>
+    <h2>Deadline: <span>{{todo.datecompleted}}</span></h2><br>
+    
+    <h2>Author: <span>{{todo.author}}</span></h2>
+    <h2>Perform: <span>{{todo.perform}}</span></h2><br>
+    
+</div>
+{% endblock %}

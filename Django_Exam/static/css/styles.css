@@ -1,0 +1,251 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.base-container {
+    min-height: 570px;
+    background-color: rgb(41, 24, 84);
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    opacity: 0.9;
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+}
+
+.base-header {
+    color: rgb(196, 222, 245);
+    display: flex;
+    justify-content: center;
+    text-shadow: 0 0 10px rgb(216, 62, 62);
+}
+
+.darkNavbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(54, 52, 52, 0.9);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+    border: 2px solid rgb(10, 79, 170);
+}
+
+.darkNavbar a {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(196, 222, 245);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#logo {
+    margin-right: auto;
+}
+
+#logo img {
+    width: 300px;
+}
+
+#footer {
+    background-color: rgb(54, 52, 52);
+    color: rgb(196, 222, 245);
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 15px 0 black;
+    border: 2px solid rgb(10, 79, 170);
+    margin-top: 2px;
+
+}
+
+.section2Footer a {
+    text-decoration: none;
+    color: rgb(196, 222, 245);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+ul.social-icons li a:hover {
+    color: red;
+}
+
+.aHover a {
+    color: rgb(196, 222, 245);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.aHover a:hover {
+    color: red;
+}
+
+/* div.card form input[type="input"] {
+    width: 250px;
+    height: 50px;
+    border: solid 1px rgb(92, 105, 99);
+    border-radius: 5px;
+} */
+
+/* div.card form input[type="img.captcha"] {
+    margin-left: 30px;
+    width: 250px;
+} */
+
+.inputCreate {
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgb(115, 195, 224);
+    color: white;
+    width: 250px;
+    height: 50px;
+    border: solid 1px rgb(92, 105, 99);
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+img.captcha {
+    margin-left: 60px;
+    margin-top: 10px;
+    width: 100px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+::placeholder {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.btnCreateStyle {
+    background-color: rgb(88, 237, 153);
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card {
+    color: rgb(223, 127, 92);
+    background-color: rgb(203, 189, 239);
+    width: 380px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.card form {
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logout {
+    cursor: pointer;
+    background-color:rgba(54, 52, 52, 0.9);
+    color: rgb(196, 222, 245);
+    height: 76px;
+    width: 150px;
+    border: 2px solid rgb(10, 79, 170);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgb(45, 40, 40);
+    font-size: 20px;
+}
+
+div.profile{
+    background-color: rgb(203, 189, 239);
+    width: 470px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(115, 126, 141);
+    margin-top: 20px;
+    opacity: 0.9;
+    text-align:left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+div.profile button{
+    margin-top: 20px;
+}
+
+div.profile h2{
+    color: rgb(117, 108, 197);
+}
+
+div.profile span{
+    color: rgb(51, 116, 172);
+}
+
+.zilla-slab-light-italic {
+    font-family: "Zilla Slab", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.todo-list{
+
+    display: flex;
+    justify-content: wrap;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-left: 40px;
+    width: 1000px;
+}
+
+
+.todo-home {
+    background-color: rgb(132, 101, 211);
+    width: 250px;
+    height: 110px;
+    margin: auto;
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgb(32, 30, 30);
+    box-shadow: 0 0 15px 0 rgb(255, 255, 255);
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(132, 101, 211);
+    width: 1199px;
+    border-radius: 3px;
+}
+
+.tools a {
+    margin-left: 10px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.pagination span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Message</title>
+{% endblock %}
+{% block header %}
+    <div class="copyright">
+        <h1 class="base-header">Message</h1>
+    </div>
+{% endblock %}
+{% block content %}
+    <div style="min-height: 570px; text-align: center">
+        <p style="color: rgb(196, 222, 245);">Пожалуйста подождите, идёт перенаправление...</p>
+
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <p style="color:red">{{ message }}</p>
+            {% elif message.tags == 'success' %}
+                <p style="color:rgb(32, 225, 32)">{{ message }}</p>
+            {% elif message.tags == 'warning' %}
+                <p style="color:rgb(233, 166, 43)">{{ message }}</p>
+            {% else %}
+                <p>{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+
+        <script>
+            setTimeoutHome();
+        </script>
+    </div>
+{% endblock %}

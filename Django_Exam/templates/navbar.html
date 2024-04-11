@@ -1,0 +1,15 @@
+{% load static %}
+
+<nav class="darkNavbar zilla-slab-light-italic">
+    <div id="logo">
+        <img src="{% static 'images/logo3.png' %}" alt="">
+    </div>
+    <a href="{% url 'home' %}">Home</a>
+    {% if not request.user.is_authenticated %}
+    <a href="{% url 'signup' %}">Sign Up</a>
+    <a href="{% url 'login' %}">Login</a>
+    {% else %}
+
+    <a class="fa fa-user" style="font-size: 15px;" href="{% url 'profile' user.id %}"> Profile</a>
+    {% endif %}
+</nav>
